@@ -11,6 +11,7 @@ import jun.config.qualifier.QualifierAppConfig;
 import org.junit.Test;
 import jun.config.Config;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class BeanTest {
 
@@ -65,6 +66,13 @@ public class BeanTest {
     @Test
     public void qualifierTest() {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(QualifierAppConfig.class);
+    }
+
+    @Test
+    public void xmlTest() {
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:import-config.xml");
+        JunBean junBean = context.getBean("junBean", JunBean.class);
+        junBean.doSomething();
     }
 
 }

@@ -3,6 +3,7 @@ package jun.config.qualifier;
 import jun.config.JunBean;
 import jun.config.MinBean;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
