@@ -7,6 +7,7 @@ import jun.config.beanProp.PropBean;
 import jun.config.dependson.AppConfig;
 import jun.config.dependson.BeanOne;
 import jun.config.importConfig.EmptyConfig;
+import jun.config.importConfig.PostConstructConfig;
 import jun.config.qualifier.QualifierAppConfig;
 import org.junit.Test;
 import jun.config.Config;
@@ -52,7 +53,11 @@ public class BeanTest {
         junBean.doSomething();
         minBean.doSomething();
         subBean.doSomething();
+    }
 
+    @Test
+    public void postConfigTest() {
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(PostConstructConfig.class);
     }
 
     @Test
