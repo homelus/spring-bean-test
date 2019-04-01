@@ -1,5 +1,6 @@
 package applicationContext;
 
+import com.sun.istack.internal.NotNull;
 import jun.config.JunBean;
 import org.junit.Test;
 import org.springframework.beans.factory.BeanCreationException;
@@ -9,7 +10,6 @@ import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.validation.beanvalidation.BeanValidationPostProcessor;
 
 import javax.annotation.PostConstruct;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import static junit.framework.TestCase.assertNotNull;
